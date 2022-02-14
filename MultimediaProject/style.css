@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+body {
+  margin: 0px;
+  font-family: 'segoe ui';
+}
+
+.nav {
+  position: fixed;
+  background: #1b1b1b;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 12;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+
+#images{
+  position: absolute;
+  width: 100%;
+  left: calc(50% - 300px);
+}
+
+.canvas{
+  position: relative;
+  display:block;
+  overflow: hidden;
+}
+
+
+#images img{
+  display: none;
+  vertical-align: bottom;
+}
+
+canvas{
+  vertical-align: bottom;
+  position: absolute;
+}
+
+nav ul{
+  height: 0;
+  margin: 0;
+}
+
+
+nav li {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  opacity: .3;
+  list-style: none;
+  top: calc(50% - 12px);
+  z-index: 100;
+  transition: opacity .3s;
+}
+
+nav li:hover{
+  opacity: .7;
+}
+
+.img{
+  background: url('bg.jpeg')no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.img::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.center{
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+}
+.center .title{
+  color: #fff;
+  font-size: 55px;
+  font-weight: 600;
+}
+.center .sub_title{
+  color: #fff;
+  font-size: 52px;
+  font-weight: 600;
+}
+.center .sub_title1{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+.center .btns{
+  margin-top: 20px;
+}
+.center .btns button{
+  height: 55px;
+  width: 170px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 10px;
+  border: 2px solid white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 10px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.center .btns button:first-child{
+  color: #fff;
+  background: none;
+}
+.btns button:first-child:hover{
+  background: white;
+  color: black;
+}
+.center .btns button:last-child{
+  background: white;
+  color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#section1 {
+  padding-top: 70px;
+  height: 800px;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+}
+
+#section2 {
+  padding-top: 10px;
+  height: 800px;
+  background-color: fff;
+  color: #000;
+  text-align: center;
+}
+
+
+ div.photo {
+  border: 1px solid #ccc;
+
+}
+
+div.photo:hover {
+  border: 1px solid #777;
+}
+
+div.photo img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  font-weight: 700;
+}
+div.button button{
+  height: 35px;
+  width: 120px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.images {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+  padding-top: 50px;
+}
+
+@media only screen and (max-width: 700px) {
+  .images {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .images {
+    width: 100%;
+  }
+}
+
+
+div.about_title {
+	
+	height: auto;
+	color:  #000;
+	font-weight: 700;
+	text-align: center;
+	display: block;
+    font-size: 1.7em;
+}
+
+div.contact_title {
+	padding-top: 30px;
+	height: auto;
+	color:  #000;
+	font-weight: 700;
+	text-align: center;
+	display: block;
+    font-size: 1.7em;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding-top: 20px; 
+}
+
+/*Footer*/
+.footer{
+text-align: center;
+left: 0;
+bottom: 0;
+width: 100%;
+}
+
